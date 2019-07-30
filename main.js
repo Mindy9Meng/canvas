@@ -26,7 +26,7 @@ download.onclick = function(){
   var a = document.createElement('a')
   document.body.appendChild(a)
   a.href = url
-  a.download = 'ÎÒµÄ»­¶ù'
+  a.download = 'æˆ‘çš„ç”»å„¿'
   a.target = '_blank'
   a.click()
 }
@@ -87,9 +87,9 @@ function drawCircle(x, y, radius) {
 
 function drawLine(x1, y1, x2, y2) {
   context.beginPath();
-  context.moveTo(x1, y1) // Æğµã
+  context.moveTo(x1, y1) // èµ·ç‚¹
   context.lineWidth = lineWidth
-  context.lineTo(x2, y2) // ÖÕµã
+  context.lineTo(x2, y2) // ç»ˆç‚¹
   context.stroke()
   context.closePath()
 }
@@ -102,9 +102,9 @@ function listenToUser(canvas) {
     x: undefined,
     y: undefined
   }
-  // ÌØĞÔ¼ì²â
+  // ç‰¹æ€§æ£€æµ‹
   if(document.body.ontouchstart !== undefined){
-    // ´¥ÆÁÉè±¸ ËÕ·Æ¾ÍÊÇ¸ö´¥ÆÁÉè±¸°¡¸ç
+    // è§¦å±è®¾å¤‡ è‹è²å°±æ˜¯ä¸ªè§¦å±è®¾å¤‡å•Šå“¥
     canvas.ontouchstart = function(aaa){
       var x = aaa.touches[0].clientX
       var y = aaa.touches[0].clientY
@@ -120,7 +120,7 @@ function listenToUser(canvas) {
       }
     }
     canvas.ontouchmove = function(aaa){
-      console.log('±ßÃş±ß¶¯')
+      console.log('è¾¹æ‘¸è¾¹åŠ¨')
       var x = aaa.touches[0].clientX
       var y = aaa.touches[0].clientY
 
@@ -138,11 +138,11 @@ function listenToUser(canvas) {
       }
     }
     canvas.ontouchend = function(){
-      console.log('ÃşÍêÁË')
+      console.log('æ‘¸å®Œäº†')
       using = false
     }
   }else{
-    // ·Ç´¥ÆÁÉè±¸
+    // éè§¦å±è®¾å¤‡
     canvas.onmousedown = function(aaa) {
       var x = aaa.clientX
       var y = aaa.clientY
